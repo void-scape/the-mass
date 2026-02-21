@@ -18,11 +18,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Remove config
-        run: rm -r .cargo
-
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Remove config
+        run: rm -r .cargo
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@master
@@ -39,11 +39,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Remove config
-        run: rm -r .cargo
-
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Remove config
+        run: rm -r .cargo
 
       - name: Install Rust toolchain
         uses: dtolnay/rust-toolchain@master
@@ -71,11 +71,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 40
     steps:
-      - name: Remove config
-        run: rm -r .cargo
-
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Remove config
+        run: rm -r .cargo
 
       - name: Set up environment
         run: echo "RUSTFLAGS=${RUSTFLAGS:+$RUSTFLAGS }-Zcodegen-backend=cranelift" >> "${GITHUB_ENV}"
@@ -105,11 +105,11 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 20
     steps:
-      - name: Remove config
-        run: rm -r .cargo
-
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Remove config
+        run: rm -r .cargo
 
       - name: Set up environment
         run: echo "RUSTFLAGS=${RUSTFLAGS:+$RUSTFLAGS }--cfg getrandom_backend=\"wasm_js\"" >> "${GITHUB_ENV}"
