@@ -32,5 +32,5 @@ fn main() {
 }
 
 fn spawn_camera(mut commands: Commands) {
-    commands.spawn(Camera3d);
+    commands.spawn(Camera3d::default());
 }
